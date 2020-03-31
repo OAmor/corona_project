@@ -21,7 +21,7 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::get('/post/case', 'DashboardController@post')->name('postData');
+Route::post('/post/case', 'DashboardController@post')->name('postData');
 
 Route::group(['prefix'=> 'backoffice', 'middleware'=>'auth'],function (){
     Route::get('/', 'DashboardController@index')->name('home');

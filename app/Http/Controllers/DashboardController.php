@@ -12,7 +12,7 @@ class DashboardController extends Controller
     }
 
     public function post(Request $request){
-        dd($request);
+        dd($request->out);
         $this->validate($request,[
             'name' => 'required|max:100',
             'shipping_price' => 'required|numeric',
