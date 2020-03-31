@@ -26,9 +26,9 @@ class CreateCasesTable extends Migration
             $table->enum('smell',['oui','non']);
             $table->enum('gorge',['oui','non']);
             $table->enum('vomiting',['oui','non']);
-            $table->float('age');
+            $table->enum('age',['oui','non']);
             $table->float('weight');
-            $table->enum('tall',['oui','non']);
+            $table->float('tall');
             $table->enum('pressure',['oui','non']);
             $table->enum('diab',['oui','non']);
             $table->enum('cancer',['oui','non']);

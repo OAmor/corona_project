@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use Session;
+use App\Cases;
 
 class DashboardController extends Controller
 {
@@ -27,8 +28,8 @@ class DashboardController extends Controller
             "gorge" => "in:oui,non|required",
             "vomiting" => "in:oui,non|required",
             "age" => "in:oui,non|required",
-            "weight" => "in:oui,non|required",
-            "tall" => "in:oui,non|required",
+            "weight" => "float|required",
+            "tall" => "float|required",
             "pressure" => "in:oui,non|required",
             "diab" => "in:oui,non|required",
             "cancer" => "in:oui,non|required",
@@ -43,6 +44,40 @@ class DashboardController extends Controller
 
         if ($validator->fails()) {
             Session::flash('warning',"كل الحقول مطلوبة ");
+            return redirect()->back();
+        }
+
+        try{
+            $data = $request->all();
+            $result = 0;
+            if($request->out == 'oui' || $request->work == 'oui' || $request->contact == 'oui' || $request->meet == 'oui' || $request->assist == 'oui')
+                $result += 2;
+            
+            if($request->fivers == 'oui' || $request->mucils == 'oui' )
+                $result += 2;  
+                
+            if($request->cough == 'oui' )
+                $result += 2;
+            
+            if($request->smell == 'oui' )
+                $result += 2;
+                
+            if($request->gorge == 'oui' )
+                $result += 1;
+                
+            if($request->vomiting == 'oui' )
+                $result += 1;
+    
+            $data['result'] = $result;    
+                
+            $case = new Cases($data);
+            $case->save();
+
+            return view('result')->with('res',$result);
+
+        }catch(\Exception $e){
+            Log::error($e->getMessage());
+            Session::flash('error',"خطأ تقني !");
             return redirect()->back();
         }
     }
