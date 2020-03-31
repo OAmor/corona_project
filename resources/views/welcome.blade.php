@@ -13,7 +13,6 @@
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
-
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     </head>
     <body>
