@@ -28,20 +28,92 @@
 
         <div class="container">
         <div class="card">
-            <div class="card-body text-right">
-                هل كنت على اتصال مع شخص تأكدت من اصابته بفيروس كورونا خلال ال 14 يوم السابقة ؟ 
-                <!-- Default inline 1-->
-                <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline1">ﻻ</label>
-                </div>
+            <form action="">
+                <div class="card text-right">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <b class="num"> -1</b>
+                            هل كنت في سفر للخارج موخرا أو على اتصال وثيق مع شخص عاد موخرا من الخارج أو من مدينة خطر الاصابة بداء كورونا عال فيها ؟
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline1" name="out">
+                                <label class="custom-control-label" for="defaultInline1">ﻻ</label>
+                            </div>
 
-                <!-- Default inline 2-->
-                <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline2">نعم</label>
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline2" name="out">
+                                <label class="custom-control-label" for="defaultInline2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            
+                            <b class="num"> -2</b>
+                            ماهي طبيعة مهنتك ؟ بعض المهن خطر الاصابة فيها عالي, هل مهنتك تجعلك على اتصال مع عدة اشخاص (تاجر,صيدلي,عامل في فندق,مقهى , مطعم,سائق سيارة أجرة أو حافلة ..),تشتغل مهني في الصحة (طبيب,ممرض,اداري في مستشفى أو عيادة ,سائق سيارة اسعاف) 
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline1" name="work">
+                                <label class="custom-control-label" for="defaultInline1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline2" name="work">
+                                <label class="custom-control-label" for="defaultInline2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            هل كنت على اتصال مع شخص تأكدت من اصابته بفيروس كورونا خلال ال 14 يوم السابقة ؟ 
+                            <b class="num"> -3</b>
+            
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline1" name="contact">
+                                <label class="custom-control-label" for="defaultInline1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline2" name="contact">
+                                <label class="custom-control-label" for="defaultInline2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            هل سبق أن التقيت أو قدمت رعاية صحية لمريض مشبوه بالاصابة بكورونا, أو لديه اعراض زكام, حمى, سعال, ولم يتم تشخيصه أو تأكيد اصابته خلال 14 يوم السابقة ؟
+                            <b class="num"> -4</b>
+            
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline1" name="meet">
+                                <label class="custom-control-label" for="defaultInline1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline2" name="meet">
+                                <label class="custom-control-label" for="defaultInline2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            هل حضرت وليمة ,عرس, احتفال عائلي خلال ال 14 يوم سبقت بداية الاعراض ؟
+                            <b class="num"> -4</b>
+            
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline1" name="assist">
+                                <label class="custom-control-label" for="defaultInline1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="defaultInline2" name="assist">
+                                <label class="custom-control-label" for="defaultInline2">نعم</label>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </form>
+            
         </div>
         </div>
 

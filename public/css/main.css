@@ -62,3 +62,9 @@ nav div {
 .visible-title {
     visibility: visible;
 }
+
+/* Content */
+.num{
+    float: right;
+    margin-left: 10px;
+}
