@@ -50,12 +50,8 @@
                         </span>
                     @enderror
                 </div>
-                <div class="row">
-                    <div class="col-8">
-
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-4">
+                <div class="row justify-content-center">
+                    <div class="col-6">
                         <button type="submit" class="btn btn-primary btn-block">Connecter</button>
                     </div>
                     <!-- /.col -->
