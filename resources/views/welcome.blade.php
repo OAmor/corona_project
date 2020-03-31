@@ -26,6 +26,28 @@
         </header>
 
 
+        <div class="container">
+        <div class="card">
+            <div class="card-body text-right">
+                هل كنت على اتصال مع شخص تأكدت من اصابته بفيروس كورونا خلال ال 14 يوم السابقة ؟ 
+                <!-- Default inline 1-->
+                <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                    <label class="custom-control-label" for="defaultInline1">ﻻ</label>
+                </div>
+
+                <!-- Default inline 2-->
+                <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                    <label class="custom-control-label" for="defaultInline2">نعم</label>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
 
         <!-- Footer -->
         <footer class="page-footer font-small blue">
