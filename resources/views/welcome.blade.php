@@ -231,14 +231,14 @@
                         كم زونك ؟
                             <b class="num"> -4</b>
             
-                            <input style="direction:rtl" type="number" name="weight" class="form-control" value="0">
+                            <input step="0.01" style="direction:rtl" type="number" name="weight" class="form-control" value="0">
                         </li>
 
                         <li class="list-group-item">
                         كم طولك ؟
                             <b class="num"> -4</b>
             
-                            <input style="direction:rtl" type="number" name="tall" class="form-control" value="0">
+                            <input step="0.01" style="direction:rtl" type="number" name="tall" class="form-control" value="0">
 
                         </li>
 
