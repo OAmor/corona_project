@@ -346,7 +346,7 @@
                                 <!-- Default inline 1-->
                                 <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="non_concerne0" value="non_concerne" name="pregnant">
-                                <label class="custom-control-label" for="non_concerne0">ﻻ</label>
+                                <label class="custom-control-label" for="non_concerne0">غير معني</label>
                             </div>
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
