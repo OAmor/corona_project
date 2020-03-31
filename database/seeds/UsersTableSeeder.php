@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
                 "id"         => 1,
                 "name"   => "Admin",
                 "email"      => "admin@corona.com",
-                "password"   => bcrypt('savanah2020'),
+                "password"   => bcrypt('corona@2020.'),
                 "created_at" => $now,
                 "updated_at" => $now,
             ]);

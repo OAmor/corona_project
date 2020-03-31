@@ -59,7 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <nav class="user-panel mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="{{route('commands')}}" class="nav-link {{Route::is('commands')? 'active' : ''}}">
+                        <a href="{{route('cases')}}" class="nav-link {{Route::is('cases')? 'active' : ''}}">
                             <i class="fas fa-truck nav-icon"></i>
                             <p>Tous les cas</span></p>
                         </a>

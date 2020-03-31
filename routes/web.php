@@ -21,6 +21,7 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::group(['prefix'=> 'backoffice', 'middleware'=>['auth', 'admin']],function (){
+Route::group(['prefix'=> 'backoffice', 'middleware'=>'auth'],function (){
     Route::get('/', 'DashboardController@index')->name('home');
+    Route::get('/cases', 'DashboardController@cases')->name('cases');
 });
