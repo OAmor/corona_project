@@ -10,4 +10,13 @@ class DashboardController extends Controller
     {
         return view('dashboard.index');
     }
+
+    public function post(Request $request){
+        dd($request);
+        $this->validate($request,[
+            'name' => 'required|max:100',
+            'shipping_price' => 'required|numeric',
+            'image' => 'file'
+        ]);
+    }
 }
