@@ -12,6 +12,8 @@
         <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     </head>
     <body>
@@ -344,8 +346,8 @@
                             <b class="num"> -4</b>
                                 <!-- Default inline 1-->
                                 <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="pregnant1" value="non" name="pregnant">
-                                <label class="custom-control-label" for="pregnant1">ﻻ</label>
+                                <input type="radio" class="custom-control-input" id="non_concerne0" value="non_concerne" name="pregnant">
+                                <label class="custom-control-label" for="non_concerne0">ﻻ</label>
                             </div>
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -440,7 +442,26 @@
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <script src="{{asset('js/popper.min.js')}}"></script>
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('js/toastr.min.js') }}"></script>
         <script src="{{ asset('js/mdb.min.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+
+        @if(Session::has('success'))
+    <script>
+        toastr.success("{{ Session::get('success') }}");
+    </script>
+@endif
+
+@if(Session::has('warning'))
+    <script>
+        toastr.warning("{{ Session::get('warning') }}");
+    </script>
+@endif
+
+@if(Session::has('error'))
+    <script>
+        toastr.error("{{ Session::get('error') }}");
+    </script>
+@endif
     </body>
 </html>
