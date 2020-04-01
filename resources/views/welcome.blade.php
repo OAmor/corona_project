@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>CORONA</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;900&display=swap" rel="stylesheet"> 
-        <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="{{asset('css/fa_all.min.css')}}">
-        <!-- Theme style -->
-        <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="header-banner">
-                <h1>فحص كورونا</h1>
-            </div>
-            <div class="clear"></div>
-            <nav>
-                <div class="site-title">فحص كورونا</div>
-            </nav>
-        </header>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CORONA</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{asset('css/fa_all.min.css')}}">
+    <!-- Theme style -->
+    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="woverlay d-none"><i class="fas fa-spinner fa-pulse fa-4x"></i></div>
+    <header>
+        <div class="header-banner">
+            <h1>فحص كورونا</h1>
+        </div>
+        <div class="clear"></div>
+        <nav>
+            <div class="site-title">فحص كورونا</div>
+        </nav>
+    </header>
 
 
-        <div class="container">
+    <div class="container">
         <div class="card my-5">
-            <form action="{{route('postData')}}" method="post">
+            <form action="{{route('postData')}}" method="post" id="postForm">
                 @csrf()
                 <div class="card text-right">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <b class="num"> -1</b>
-                            هل كنت في سفر للخارج موخرا أو على اتصال وثيق مع شخص عاد موخرا من الخارج أو من مدينة خطر الاصابة بداء كورونا عال فيها ؟
+                            هل كنت في سفر للخارج موخرا أو على اتصال وثيق مع شخص عاد موخرا من الخارج أو من مدينة خطر
+                            الاصابة بداء كورونا عال فيها ؟
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="out1" value="non" name="out">
@@ -49,12 +53,15 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            
+
                             <b class="num"> -2</b>
-                            ما هي طبيعة مهنتك؟ بعض المهن خطر الإصابة فيها عالي، هل مهنتك تجعلك على اتصال مع عدة أشخاص (محطات
-النقل الجوي أو البحري، تاجر، صيدلي، عامل في فندق، مقهى، مطعم، سائق سيارة أجرة أو حافلة ...) تشتغل مهنة في 
-إطار الخدمات الاجتماعية (البلدية، البريد والمواصلات، شرطي، رجل أمن، الحماية المدنية، حارس)، تشتغل مهني في
-الصحة (طبيب، ممرض، إداري في مستشفى أو عيادة، سائق سيارة إسعاف)
+                            ما هي طبيعة مهنتك؟ بعض المهن خطر الإصابة فيها عالي، هل مهنتك تجعلك على اتصال مع عدة أشخاص
+                            (محطات
+                            النقل الجوي أو البحري، تاجر، صيدلي، عامل في فندق، مقهى، مطعم، سائق سيارة أجرة أو حافلة ...)
+                            تشتغل مهنة في
+                            إطار الخدمات الاجتماعية (البلدية، البريد والمواصلات، شرطي، رجل أمن، الحماية المدنية، حارس)،
+                            تشتغل مهني في
+                            الصحة (طبيب، ممرض، إداري في مستشفى أو عيادة، سائق سيارة إسعاف)
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="work1" value="non" name="work">
@@ -68,25 +75,28 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            هل كنت على اتصال مع شخص تأكدت من اصابته بفيروس كورونا خلال ال 14 يوم السابقة ؟ 
+                            هل كنت على اتصال مع شخص تأكدت من اصابته بفيروس كورونا خلال ال 14 يوم السابقة ؟
                             <b class="num"> -3</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="contact1" value="non" name="contact">
+                                <input type="radio" class="custom-control-input" id="contact1" value="non"
+                                    name="contact">
                                 <label class="custom-control-label" for="contact1">ﻻ</label>
                             </div>
 
                             <!-- Default inline 2-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="contact2" value="oui" name="contact">
+                                <input type="radio" class="custom-control-input" id="contact2" value="oui"
+                                    name="contact">
                                 <label class="custom-control-label" for="contact2">نعم</label>
                             </div>
                         </li>
                         <li class="list-group-item">
-                            هل سبق أن التقيت أو قدمت رعاية صحية لمريض مشبوه بالاصابة بكورونا, أو لديه اعراض زكام, حمى, سعال, ولم يتم تشخيصه أو تأكيد اصابته خلال 14 يوم السابقة ؟
+                            هل سبق أن التقيت أو قدمت رعاية صحية لمريض مشبوه بالاصابة بكورونا, أو لديه اعراض زكام, حمى,
+                            سعال, ولم يتم تشخيصه أو تأكيد اصابته خلال 14 يوم السابقة ؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="meet1" value="non" name="meet">
@@ -102,7 +112,7 @@
                         <li class="list-group-item">
                             هل حضرت وليمة ,عرس, احتفال عائلي خلال ال 14 يوم سبقت بداية الاعراض ؟
                             <b class="num"> -5</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="assist1" value="non" name="assist">
@@ -118,7 +128,7 @@
                         <li class="list-group-item">
                             هل تعاني من الحمى ؟ (درجة حرارتك فوق 38 درجة )
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="fivers1" value="non" name="fivers">
@@ -132,9 +142,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تعاني من صداع حاد مع آلام في العضلات؟ 
+                            هل تعاني من صداع حاد مع آلام في العضلات؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="mucils1" value="non" name="mucils">
@@ -148,8 +158,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تعاني من السعال، أو من عسر في التنفس أو من آلام في الصدر؟ (منذ مدة غير بعيدة)                            <b class="num"> -4</b>
-            
+                            هل تعاني من السعال، أو من عسر في التنفس أو من آلام في الصدر؟ (منذ مدة غير بعيدة) <b
+                                class="num"> -4</b>
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="cough1" value="non" name="cough">
@@ -163,8 +174,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تعاني من فقدان حاسة ال ّشم أو حاسة الذوق خلال الأيام القليلة الماضية؟                            <b class="num"> -4</b>
-            
+                            هل تعاني من فقدان حاسة ال ّشم أو حاسة الذوق خلال الأيام القليلة الماضية؟ <b class="num">
+                                -4</b>
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="smell1" value="non" name="smell">
@@ -178,9 +190,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تعاني من رشح الأنف (سيلان الأنف) أو آلام في الحلق؟
-                                                    <b class="num"> -4</b>
-            
+                            هل تعاني من رشح الأنف (سيلان الأنف) أو آلام في الحلق؟
+                            <b class="num"> -4</b>
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="gorge1" value="non" name="gorge">
@@ -194,25 +206,27 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تعاني من القيئ أو من الإسهال؟
+                            هل تعاني من القيئ أو من الإسهال؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="vomiting1" value="non" name="vomiting">
+                                <input type="radio" class="custom-control-input" id="vomiting1" value="non"
+                                    name="vomiting">
                                 <label class="custom-control-label" for="vomiting1">ﻻ</label>
                             </div>
 
                             <!-- Default inline 2-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="vomiting2" value="oui" name="vomiting">
+                                <input type="radio" class="custom-control-input" id="vomiting2" value="oui"
+                                    name="vomiting">
                                 <label class="custom-control-label" for="vomiting2">نعم</label>
                             </div>
                         </li>
                         <li class="list-group-item">
-                        كم عمرك؟ أكثر من 65 أم أقل
-                                                    <b class="num"> -4</b>
-            
+                            كم عمرك؟ أكثر من 65 أم أقل
+                            <b class="num"> -4</b>
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="age1" value="non" name="age">
@@ -228,42 +242,46 @@
 
 
                         <li class="list-group-item">
-                        كم زونك ؟
+                            كم زونك ؟
                             <b class="num"> -4</b>
-            
-                            <input step="0.01" style="direction:rtl" type="number" name="weight" class="form-control" value="0">
+
+                            <input step="0.01" style="direction:rtl" type="number" name="weight" class="form-control"
+                                value="0">
                         </li>
 
                         <li class="list-group-item">
-                        كم طولك ؟
+                            كم طولك ؟
                             <b class="num"> -4</b>
-            
-                            <input step="0.01" style="direction:rtl" type="number" name="tall" class="form-control" value="0">
+
+                            <input step="0.01" style="direction:rtl" type="number" name="tall" class="form-control"
+                                value="0">
 
                         </li>
 
 
 
                         <li class="list-group-item">
-                        هل تشتكي من ارتفاع في ضغط أو من مرض في القلب والشرايين، أو هل تتناول أدوية لعلاج القلب؟
+                            هل تشتكي من ارتفاع في ضغط أو من مرض في القلب والشرايين، أو هل تتناول أدوية لعلاج القلب؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="pressure1" value="non" name="pressure">
+                                <input type="radio" class="custom-control-input" id="pressure1" value="non"
+                                    name="pressure">
                                 <label class="custom-control-label" for="pressure1">ﻻ</label>
                             </div>
 
                             <!-- Default inline 2-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="pressure2" value="oui" name="pressure">
+                                <input type="radio" class="custom-control-input" id="pressure2" value="oui"
+                                    name="pressure">
                                 <label class="custom-control-label" for="pressure2">نعم</label>
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تشتكي من داء السكري؟  
+                            هل تشتكي من داء السكري؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="diab1" value="non" name="diab">
@@ -277,9 +295,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل أصبت بداء السرطان في آخر ثلاث سنوات؟
+                            هل أصبت بداء السرطان في آخر ثلاث سنوات؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="cancer1" value="non" name="cancer">
@@ -293,25 +311,27 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تشتكي من مرض تنفسي أو هل تجري فحوصات دورية عند الطبيب المختص في الأمراض الصدرية؟ 
+                            هل تشتكي من مرض تنفسي أو هل تجري فحوصات دورية عند الطبيب المختص في الأمراض الصدرية؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="breathing1" value="non" name="breathing">
+                                <input type="radio" class="custom-control-input" id="breathing1" value="non"
+                                    name="breathing">
                                 <label class="custom-control-label" for="breathing1">ﻻ</label>
                             </div>
 
                             <!-- Default inline 2-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="breathing2" value="oui" name="breathing">
+                                <input type="radio" class="custom-control-input" id="breathing2" value="oui"
+                                    name="breathing">
                                 <label class="custom-control-label" for="breathing2">نعم</label>
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تشتكي من فشل كلوي مزمن؟
+                            هل تشتكي من فشل كلوي مزمن؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="renal1" value="non" name="renal">
@@ -325,9 +345,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تشتكي من مرض في الكبد؟ 
+                            هل تشتكي من مرض في الكبد؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="liver1" value="non" name="liver">
@@ -341,29 +361,32 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل أنت حامل؟
+                            هل أنت حامل؟
                             <b class="num"> -4</b>
-                                <!-- Default inline 1-->
-                                <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="non_concerne0" value="non_concerne" name="pregnant">
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="non_concerne0" value="non_concerne"
+                                    name="pregnant">
                                 <label class="custom-control-label" for="non_concerne0">غير معني</label>
                             </div>
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="pregnant1" value="non" name="pregnant">
+                                <input type="radio" class="custom-control-input" id="pregnant1" value="non"
+                                    name="pregnant">
                                 <label class="custom-control-label" for="pregnant1">ﻻ</label>
                             </div>
 
                             <!-- Default inline 2-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="pregnant2" value="oui" name="pregnant">
+                                <input type="radio" class="custom-control-input" id="pregnant2" value="oui"
+                                    name="pregnant">
                                 <label class="custom-control-label" for="pregnant2">نعم</label>
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تشتكي من مرض معروف أنه ينقص من مناعتك؟
+                            هل تشتكي من مرض معروف أنه ينقص من مناعتك؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="deasis1" value="non" name="deasis">
@@ -377,9 +400,9 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        BCG هل تلقيت القاح المضاد للسل  ؟
+                            BCG هل تلقيت القاح المضاد للسل ؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="bcg1" value="non" name="bcg">
@@ -393,26 +416,33 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                        هل تلقيت اللقاح المضاد للأنفلونزا هذه السنة؟
+                            هل تلقيت اللقاح المضاد للأنفلونزا هذه السنة؟
                             <b class="num"> -4</b>
-            
+
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="influenza1" value="non" name="influenza">
+                                <input type="radio" class="custom-control-input" id="influenza1" value="non"
+                                    name="influenza">
                                 <label class="custom-control-label" for="influenza1">ﻻ</label>
                             </div>
 
                             <!-- Default inline 2-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="influenza2" value="oui" name="influenza">
+                                <input type="radio" class="custom-control-input" id="influenza2" value="oui"
+                                    name="influenza">
                                 <label class="custom-control-label" for="influenza2">نعم</label>
                             </div>
+                        </li>
+                        <li class="list-group-item">
+                            يرجى كتابة رقم هاتفك
+                            <b class="num"> -4</b>
+                            <input type="text" class="form-control" style="direction:rtl" name="phone" required>
                         </li>
                     </ul>
                 </div>
 
 
-                <div class="text-center">
+                <div class="text-center" type="submit">
                     <button class="btn btn-success">
                         <i class="fa fa-check"></i>
                         عرض النتيجة
@@ -420,47 +450,66 @@
                 </div>
             </form>
         </div>
-        </div>
+    </div>
 
 
 
 
 
-        <!-- Footer -->
-        <footer class="page-footer font-small blue">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 جميع الحقوق محفوظة
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 جميع الحقوق محفوظة
             <a href="/">CORONA</a>
-            </div>
-            <!-- Copyright -->
+        </div>
+        <!-- Copyright -->
 
-        </footer>
-        <!-- Footer -->
+    </footer>
+    <!-- Footer -->
 
-        <script src="{{asset('js/jquery.min.js')}}"></script>
-        <script src="{{asset('js/popper.min.js')}}"></script>
-        <script src="{{asset('js/bootstrap.min.js')}}"></script>
-        <script src="{{ asset('js/toastr.min.js') }}"></script>
-        <script src="{{ asset('js/mdb.min.js') }}"></script>
-        <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+    <script src="{{ asset('js/mdb.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/swal.js')}}"></script>
 
-        @if(Session::has('success'))
     <script>
-        toastr.success("{{ Session::get('success') }}");
+        toastr.options = {
+            "positionClass": "toast-bottom-left",
+        }
+        $(function(){
+            $("#postForm").submit(function(e){
+                e.preventDefault();
+                var form= $(this);
+                var url= form.attr("action");
+                $.ajax({
+                    data: form.serialize(),
+                    url: url,
+                    type: "POST",
+                    beforeSend:function(){
+                        $("body > .woverlay").removeClass("d-none");
+                    },
+                    success: function(response){
+                        Swal.fire({
+                            icon : "warning",
+                            titleText : "النتيجة",
+                            text : response.message,
+                            confirmButtonText : 'حسنا'
+                        });
+                    },
+                    error : function(response){
+                        toastr.error(response.responseJSON.message)
+                    },
+                    complete: function(){
+                        $("body > .woverlay").addClass("d-none");
+                    }
+                })
+            })
+        })
     </script>
-@endif
+</body>
 
-@if(Session::has('warning'))
-    <script>
-        toastr.warning("{{ Session::get('warning') }}");
-    </script>
-@endif
-
-@if(Session::has('error'))
-    <script>
-        toastr.error("{{ Session::get('error') }}");
-    </script>
-@endif
-    </body>
 </html>
