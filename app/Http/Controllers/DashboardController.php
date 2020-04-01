@@ -69,6 +69,7 @@ class DashboardController extends Controller
                 $result += 1;
     
             $data['result'] = $result;    
+            $data['ip'] = request()->ip();    
                 
             $case = new Cases($data);
             $case->save();
