@@ -82,4 +82,23 @@ class DashboardController extends Controller
             return redirect()->back();
         }
     }
+
+    public function cases(){
+        $cases = Cases::latest()->paginate(50);
+        return view('dashboard.cases.index')->with('cases',$cases);
+    }
+
+    public function destroy(Request $request)
+    {
+        try{
+            $c = Cases::find($request->id);
+            $c->delete();
+            Session::flash('success',"Le cas a été supprimé !");
+            return redirect()->back();
+        }catch (\Exception $e){
+            Log::error($e->getMessage());
+            Session::flash('error',"Une erreur ineterne !");
+            return redirect()->back();
+        }
+    }
 }

@@ -38,7 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="{{route('home')}}" class="brand-link">
-            <img src="{{asset('logo.jpg')}}" alt="AdminLTE Logo" class="brand-image img-circle"
+            <img src="{{asset('logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">CORONA</span>
         </a>

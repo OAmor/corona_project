@@ -26,4 +26,5 @@ Route::post('/post/case', 'DashboardController@post')->name('postData');
 Route::group(['prefix'=> 'backoffice', 'middleware'=>'auth'],function (){
     Route::get('/', 'DashboardController@index')->name('home');
     Route::get('/cases', 'DashboardController@cases')->name('cases');
+    Route::get('/destroy', 'DashboardController@destroy')->name('cases_delete');
 });
