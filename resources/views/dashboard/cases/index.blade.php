@@ -14,8 +14,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Ip</th>
-                    <th scope="col">Date</th>
                     <th scope="col">Résultat</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
