@@ -525,7 +525,7 @@
                         Swal.fire({
                             icon : "warning",
                             titleText : "النتيجة",
-                            text : response.message,
+                            html : response.message,
                             confirmButtonText : 'حسنا'
                         });
                     },
