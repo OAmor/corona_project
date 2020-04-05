@@ -126,8 +126,8 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            هل تعاني من الحمى ؟ (درجة حرارتك فوق 38 درجة )
-                            <b class="num"> -4</b>
+                            هل تعاني من الحمى ؟
+                            <b class="num"> -6</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -143,7 +143,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تعاني من صداع حاد مع آلام في العضلات؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -7</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -158,8 +158,8 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            هل تعاني من السعال، أو من عسر في التنفس أو من آلام في الصدر؟ (منذ مدة غير بعيدة) <b
-                                class="num"> -4</b>
+                            هل تعاني من السعال ؟
+                             <b class="num"> -8</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -174,24 +174,8 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            هل تعاني من فقدان حاسة ال ّشم أو حاسة الذوق خلال الأيام القليلة الماضية؟ <b class="num">
-                                -4</b>
-
-                            <!-- Default inline 1-->
-                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="smell1" value="non" name="smell">
-                                <label class="custom-control-label" for="smell1">ﻻ</label>
-                            </div>
-
-                            <!-- Default inline 2-->
-                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="smell2" value="oui" name="smell">
-                                <label class="custom-control-label" for="smell2">نعم</label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            هل تعاني من رشح الأنف (سيلان الأنف) أو آلام في الحلق؟
-                            <b class="num"> -4</b>
+                            هل تعاني من الام في الحلق ؟
+                             <b class="num"> -9</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -206,8 +190,57 @@
                             </div>
                         </li>
                         <li class="list-group-item">
+                            هل تعاني من رشح الأنف (سيلان الأنف ) ؟
+                            <b class="num"> -10</b>
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="nose1" value="non" name="nose">
+                                <label class="custom-control-label" for="nose1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="nose2" value="oui" name="nose">
+                                <label class="custom-control-label" for="nose2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            هل تعاني من فقدان حاسة ال ّشم أو حاسة الذوق خلال الأيام القليلة الماضية؟ <b class="num">
+                                -11</b>
+
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="smell1" value="non" name="smell">
+                                <label class="custom-control-label" for="smell1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="smell2" value="oui" name="smell">
+                                <label class="custom-control-label" for="smell2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            هل تعاني من عسر التنفس او الام في الصدر ؟
+                            <b class="num"> -12</b>
+
+                            <!-- Default inline 1-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="chest1" value="non"
+                                    name="chest">
+                                <label class="custom-control-label" for="chest1">ﻻ</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="chest2" value="oui"
+                                    name="chest">
+                                <label class="custom-control-label" for="chest2">نعم</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
                             هل تعاني من القيئ أو من الإسهال؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -13</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -224,26 +257,17 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            كم عمرك؟ أكثر من 65 أم أقل
-                            <b class="num"> -4</b>
+                            كم عمرك؟ 
+                            <b class="num"> -14</b>
 
-                            <!-- Default inline 1-->
-                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="age1" value="non" name="age">
-                                <label class="custom-control-label" for="age1">ﻻ</label>
-                            </div>
-
-                            <!-- Default inline 2-->
-                            <div style="float:left" class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="age2" value="oui" name="age">
-                                <label class="custom-control-label" for="age2">نعم</label>
-                            </div>
+                            <input style="direction:rtl" type="number" name="weight" class="form-control"
+                                value="0">
                         </li>
 
 
                         <li class="list-group-item">
-                            كم زونك ؟
-                            <b class="num"> -4</b>
+                            كم وزنك ؟
+                            <b class="num"> -15</b>
 
                             <input step="0.01" style="direction:rtl" type="number" name="weight" class="form-control"
                                 value="0">
@@ -251,7 +275,7 @@
 
                         <li class="list-group-item">
                             كم طولك ؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -16</b>
 
                             <input step="0.01" style="direction:rtl" type="number" name="tall" class="form-control"
                                 value="0">
@@ -262,7 +286,7 @@
 
                         <li class="list-group-item">
                             هل تشتكي من ارتفاع في ضغط أو من مرض في القلب والشرايين، أو هل تتناول أدوية لعلاج القلب؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -17</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -280,7 +304,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تشتكي من داء السكري؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -18</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -296,7 +320,7 @@
                         </li>
                         <li class="list-group-item">
                             هل أصبت بداء السرطان في آخر ثلاث سنوات؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -19</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -312,7 +336,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تشتكي من مرض تنفسي أو هل تجري فحوصات دورية عند الطبيب المختص في الأمراض الصدرية؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -20</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -330,7 +354,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تشتكي من فشل كلوي مزمن؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -21</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -346,7 +370,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تشتكي من مرض في الكبد؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -22</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -362,7 +386,7 @@
                         </li>
                         <li class="list-group-item">
                             هل أنت حامل؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -23</b>
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="non_concerne0" value="non_concerne"
@@ -385,7 +409,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تشتكي من مرض معروف أنه ينقص من مناعتك؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -24</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -401,7 +425,7 @@
                         </li>
                         <li class="list-group-item">
                             BCG هل تلقيت القاح المضاد للسل ؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -25</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -417,7 +441,7 @@
                         </li>
                         <li class="list-group-item">
                             هل تلقيت اللقاح المضاد للأنفلونزا هذه السنة؟
-                            <b class="num"> -4</b>
+                            <b class="num"> -26</b>
 
                             <!-- Default inline 1-->
                             <div style="float:left" class="custom-control custom-radio custom-control-inline">
@@ -434,8 +458,13 @@
                             </div>
                         </li>
                         <li class="list-group-item">
+                            أدخل برديك الالكتروني (خانة غير اجبارية) .
+                            <b class="num"> -27</b>
+                            <input type="text" class="form-control" style="direction:rtl" name="phone" required>
+                        </li>
+                        <li class="list-group-item">
                             يرجى كتابة رقم هاتفك
-                            <b class="num"> -4</b>
+                            <b class="num"> -28</b>
                             <input type="text" class="form-control" style="direction:rtl" name="phone" required>
                         </li>
                     </ul>
