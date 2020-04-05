@@ -128,22 +128,36 @@ class DashboardController extends Controller
     }
     private function getMessage(Request $request){
         if($request->out == 'oui' || $request->work == 'oui' || $request->contact == 'oui' || $request->meet == 'oui' || $request->assist == 'oui'){
-            if($request->fivers != 'oui' && $request->mucils != 'oui' && $request->cough != 'oui' && $request->smell != 'oui' && $request->gorge != 'oui' && $request->vomiting !='oui'){
-                return 'من الرجاء الإتصال بالرقم الأخضر لإكمال 3030 لإكمال التشخيص';
+            // Qsts from 1 to 5 are true
+            if($request->chest == 'oui'){
+                //Qst 12 is true
+                return 'الرجاء الاتصال  بسرعة بالرقم الاخضر 3030 للحصول على النصائح الضرورية, و اذا حدثت عندك مضاعفات من جراء ضيق التنفس اتصل بالحماية المدنية 14 أو 1021, أو اتصل ب SAMU';
+            }elseif($request->fivers != 'oui' && $request->mucils != 'oui' && $request->cough != 'oui' && $request->smell != 'oui' && $request->gorge != 'oui' && $request->vomiting !='oui'
+                && $request->nose != 'oui') {
+                // Qsts from 6 to 13 are false
+                return 'عليك الاحتياط و الحذر, التزم الحجر المنزلي , اذا ظهر عليك احد الاعراض التي سالناك عنها , استشر طبيبا عبر الرقم الاخضر 3030';
             }else{
-                return 'الرجاء الاتصال بسرعة على الرقم الأخضر 3030 أو على رقم الحماية المدنية 14 أو 1';
+                // At least one of qsts 6 to 13 (except 12) is true
+                return ' الرجاء الاتصال على الرقم الأخضر 3030 لاكمال التشخيص, ﻻ تنسى الاجراءات والوقائية';
             }
         }else{
-            if($request->cough == 'oui' && ($request->fivers == 'oui' || $request->mucils == 'oui')){
-                return 'يجب الاتصال فورا على الرقم الأخضر 3030 إكمال التشخيص';
-            }else if($request->smell=='oui'){
-                return 'الرجاء الاتصال بالرقم الأخضر 3030 الاستفسار أكثر';
-            }else if($request->fevers == 'oui' || $request->mucils == 'oui' || $request->cough == 'oui' || $request->gorge == 'oui'){
-                return 'أنت تعاني من أعراض الانفلونزا الموسمية ! عليك الاتصال بطبيب، واتبع اإلرشادات الوقائية';
-            }else{
-                return 'الزم بيتك واتبع الإرشادات الوقائية';
+            // Qsts from 1 to 5 are false
+            if($request->chest == 'oui'){
+                //Qst 12 is true
+                if($request->fivers == 'oui' || $request->mucils == 'oui' || $request->cough == 'oui' || $request->gorge == 'oui' || $request->vomiting =='oui') {
+                    // At least one of qsts 6  7 8 9 and 13 is true
+                    return 'الرجاء الاتصال  بسرعة بالرقم الاخضر 3030 لاكمال التشخيص , و اذا حدثت عندك مضاعفات من جراء ضيق التنفس اتصل بالحماية المدنية 14 أو 1021, أو اتصل ب SAMU';
+                }
             }
-
+            if($request->smell == 'oui' && $request->nose != 'oui'){
+                // Qst 11 is true and 10 false
+                return 'التزم الحجر المنزلي و اتصل على الرقم الأخصر 3030 لاكمال التشخيص';
+            }
+            if($request->fivers == 'oui' || $request->mucils == 'oui' || $request->cough == 'oui' || $request->gorge == 'oui' || $request->vomiting =='oui') {
+                // At least one of qsts 6  7 8 9 and 13 is true
+                return ' التزم الحجر المنزلي , اذا ظهر عليك احد الاعراض التي سالناك عنها , استشر طبيبا عبر الرقم الاخضر 3030';
+            }
+            return 'التزم الحجر الصحي واتبع الإرشادات الوقائية';
         }
     }
 }
