@@ -460,12 +460,12 @@
                         <li class="list-group-item">
                             أدخل برديك الالكتروني (خانة غير اجبارية) .
                             <b class="num"> -27</b>
-                            <input type="text" class="form-control" style="direction:rtl" name="phone" required>
+                            <input type="text" class="form-control" style="direction:rtl" name="phone">
                         </li>
                         <li class="list-group-item">
                             يرجى كتابة رقم هاتفك
                             <b class="num"> -28</b>
-                            <input type="text" class="form-control" style="direction:rtl" name="phone" required>
+                            <input type="text" class="form-control" style="direction:rtl" name="phone">
                         </li>
                     </ul>
                 </div>
