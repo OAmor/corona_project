@@ -260,7 +260,7 @@
                             كم عمرك؟ 
                             <b class="num"> -14</b>
 
-                            <input style="direction:rtl" type="number" name="weight" class="form-control"
+                            <input style="direction:rtl" type="number" name="age" class="form-control"
                                 value="0">
                         </li>
 

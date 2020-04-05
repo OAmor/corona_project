@@ -35,6 +35,7 @@ class Cases extends Model
         'influenza',
         'result',
         'ip',
-        'phone'
+        'phone',
+        'email', 'nose', 'chest'
     ];
 }

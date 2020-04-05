@@ -26,8 +26,10 @@ class DashboardController extends Controller
             'cough' => 'in:oui,non|required',
             'smell' => 'in:oui,non|required',
             'gorge' => 'in:oui,non|required',
+            'chest' => 'in:oui,non|required',
+            'nose' => 'in:oui,non|required',
             'vomiting' => 'in:oui,non|required',
-            'age' => 'in:oui,non|required',
+            'age' => 'numeric|required',
             'weight' => 'numeric|required',
             'tall' => 'numeric|required',
             'pressure' => 'in:oui,non|required',
@@ -40,7 +42,8 @@ class DashboardController extends Controller
             'deasis' => 'in:oui,non|required',
             'bcg' => 'in:oui,non|required',
             'influenza' => 'in:oui,non|required',
-            'phone' => 'required|regex:/^0\d{9}/'
+            'phone' => 'regex:/^0\d{9}/',
+            'email' => 'email'
         ]);
 
         if ($validator->fails()) {
