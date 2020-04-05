@@ -42,7 +42,7 @@ class DashboardController extends Controller
             'deasis' => 'in:oui,non|required',
             'bcg' => 'in:oui,non|required',
             'influenza' => 'in:oui,non|required',
-            'phone' => 'regex:/^0\d{9}/',
+            'phone' => 'nullable|regex:/^0\d{9}/',
             'email' => 'email'
         ]);
 
