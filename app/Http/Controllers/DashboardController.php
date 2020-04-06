@@ -147,6 +147,9 @@ class DashboardController extends Controller
                 if($request->fivers == 'oui' || $request->mucils == 'oui' || $request->cough == 'oui' || $request->gorge == 'oui' || $request->vomiting =='oui') {
                     // At least one of qsts 6  7 8 9 and 13 is true
                     return ' الرجاء الاتصال  بسرعة بالرقم الاخضر 3030 لاكمال التشخيص , و اذا حدثت عندك مضاعفات من جراء ضيق التنفس اتصل بالحماية المدنية 14 أو 1021, أو اتصل ب <br>SAMU';
+                }elseif($request->smell == 'non' && $request->nose == 'non'){
+                    //Just 12 is true
+                    return 'التزم الحذر ، اتبع الإرشادات الوقائية ، إذا حدثت عندك مضاعفات في ضيق التنفس اطلب الرعاية الصحية بالاتصال بالحماية المدنية 14 أو بـ<br> SAMU';
                 }
             }
             if($request->smell == 'oui' && $request->nose != 'oui'){
@@ -155,7 +158,7 @@ class DashboardController extends Controller
             }
             if($request->fivers == 'oui' || $request->mucils == 'oui' || $request->cough == 'oui' || $request->gorge == 'oui' || $request->vomiting =='oui') {
                 // At least one of qsts 6  7 8 9 and 13 is true
-                return ' التزم الحجر المنزلي , اذا ظهر عليك احد الاعراض التي سالناك عنها , استشر طبيبا عبر الرقم الاخضر 3030';
+                return 'الزم بيتك و اتصل بطبيب، إذا ظهرت عليك أعراض أخرى اتصل بالرقم الأخضر 3030 لإكمال التشخيص. ';
             }
             return 'التزم الحجر الصحي واتبع الإرشادات الوقائية';
         }

@@ -463,7 +463,7 @@
                             <input type="text" class="form-control" style="direction:rtl" name="phone">
                         </li>
                         <li class="list-group-item">
-                            يرجى كتابة رقم هاتفك
+                           (خانة غير اجبارية) يرجى كتابة رقم هاتفك
                             <b class="num"> -28</b>
                             <input type="text" class="form-control" style="direction:rtl" name="phone">
                         </li>
